@@ -26,7 +26,7 @@
     </nav>
 
     <h1>Hello</h1>
-    <p>Your name: ${param.employeeName}</p>
+    <p>Your name: ${nameAttribute}</p>
 
 </div>
 
