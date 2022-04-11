@@ -26,7 +26,9 @@
     </nav>
 
     <h1>Hello</h1>
-    <p>Your name: ${nameAttribute}</p>
+    <p>Your name: ${employee.name}</p>
+    <p>Your surname: ${employee.surname}</p>
+    <p>Your salary: ${employee.salary}</p>
 
 </div>
 
