@@ -35,10 +35,12 @@
          Surname <form:input path="surname" />
          <br>
          Salary <form:input path="salary" />
-         Department <form:select path="department" />
-         <form:option value="Inf tech" label="IT"/>
-         <form:option value="Inf tech" label="HR"/>
-         <form:option value="Inf tech" label="Sales"/>
+         Department <form:select path="department">
+
+             <form:option value="Inf tech" label="IT"/>
+             <form:option value="Inf tech" label="HR"/>
+             <form:option value="Inf tech" label="Sales"/>
+         </form:select>
          <br>
          <input type="submit" value="Ok">
      </form:form>
