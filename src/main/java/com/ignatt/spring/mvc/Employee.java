@@ -1,12 +1,20 @@
 package com.ignatt.spring.mvc;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Employee {
     private String name;
     private String surname;
     private int salary;
     private String department;
+    private Map<String, String> departments;
 
     public Employee() {
+        departments = new HashMap<>();
+        departments.put("IT", "Inf Tech");
+        departments.put("HR", "Human Res");
+        departments.put("SL", "Salese");
     }
 
     public String getName() {

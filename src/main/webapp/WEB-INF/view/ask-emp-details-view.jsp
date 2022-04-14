@@ -36,10 +36,7 @@
          <br>
          Salary <form:input path="salary" />
          Department <form:select path="department">
-
-             <form:option value="Inf tech" label="IT"/>
-             <form:option value="Inf tech" label="HR"/>
-             <form:option value="Inf tech" label="Sales"/>
+             <form:options items="${employee.departments}" />
          </form:select>
          <br>
          <input type="submit" value="Ok">
