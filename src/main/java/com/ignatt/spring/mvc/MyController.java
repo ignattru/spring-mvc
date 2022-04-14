@@ -18,12 +18,16 @@ public class MyController {
 
     @RequestMapping("/askDetails")
     public String askEmployeeDeatils(Model model){
+
         model.addAttribute("employee", new Employee());
         return "ask-emp-details-view";
     }
 
     @RequestMapping("/showDetails")
     public String showEmpDetails(@ModelAttribute("employee") Employee emp){
+
+        String name = emp.getName();
+        emp.
 
         return "show-emp-details-view";
     }
