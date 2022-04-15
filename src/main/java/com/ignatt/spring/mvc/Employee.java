@@ -1,9 +1,12 @@
 package com.ignatt.spring.mvc;
 
+import javax.validation.constraints.Size;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Employee {
+
+    @Size(min = 2, message = "name must be min 2 symb")
     private String name;
     private String surname;
     private int salary;
