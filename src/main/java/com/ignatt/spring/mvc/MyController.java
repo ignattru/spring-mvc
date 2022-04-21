@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.validation.Valid;
 
 
@@ -20,16 +19,13 @@ public class MyController {
 
     @RequestMapping("/askDetails")
     public String askEmployeeDeatils(Model model){
-
         model.addAttribute("employee", new Employee());
         return "ask-emp-details-view";
     }
 
     @RequestMapping("/showDetails")
     public String showEmpDetails(@Valid @ModelAttribute("employee") Employee emp, BindingResult bindingResult){
-
-
-
+        //test branch
         if(bindingResult.hasErrors()) {
             return "ask-emp-details-view";
         } else  {
