@@ -5,7 +5,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.validation.Valid;
 
 
@@ -27,9 +26,7 @@ public class MyController {
 
     @RequestMapping("/showDetails")
     public String showEmpDetails(@Valid @ModelAttribute("employee") Employee emp, BindingResult bindingResult){
-
-
-
+        //test branch
         if(bindingResult.hasErrors()) {
             return "ask-emp-details-view";
         } else  {
