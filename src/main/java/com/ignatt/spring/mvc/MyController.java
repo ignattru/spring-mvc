@@ -19,7 +19,6 @@ public class MyController {
 
     @RequestMapping("/askDetails")
     public String askEmployeeDeatils(Model model){
-
         model.addAttribute("employee", new Employee());
         return "ask-emp-details-view";
     }
