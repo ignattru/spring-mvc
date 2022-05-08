@@ -30,6 +30,7 @@
     <h1>Hello</h1>
     <p>This is one of paragraph!</p>
     <form:form action="saveEmployee" modelAttribute="employee">
+            <form:hidden path="id"/>
             Name <form:input path="name"/>
             Surname <form:input path="surname"/>
             Department <form:input path="department" />
