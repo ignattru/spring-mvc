@@ -6,6 +6,7 @@ import com.ignatt.spring.mvc.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
@@ -22,4 +23,20 @@ public class MyController {
         model.addAttribute("allEmps", allEmployees);
         return "all-employees";
     }
+
+    @RequestMapping("/addNewEmployee")
+    public String addNewEmployee(Model model) {
+        Employee emmployee = new Employee();
+        model.addAttribute("employee", emmployee);
+
+        return "employee-info";
+    }
+    @RequestMapping("/saveEmployee")
+    public String saveEmployee(@ModelAttribute("employee") Employee employee) {
+
+        employeeService.saveEmployee(employee);
+
+        return "redirect:/";
+    }
+
 }
