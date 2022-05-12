@@ -25,10 +25,9 @@
                 </div>
             </div>
         </nav>
-
         <h1>Hello</h1>
         <p>This is one of paragraph!
-            <a href="askDetails">askDet</a>
+            <a href="askDetails">link</a>
         </p>
         <table class="table">
             <thead class="table-dark">
@@ -50,14 +49,13 @@
                         <td>${emp.surname}</td>
                         <td>${emp.department}</td>
                         <td>${emp.salary}</td>
-                        <td><input type="button" value="Update" onClick="window.location.href = '${updateButton}'" /></td>
+                        <td><input type="button" class="btn btn-warning" value="Update" onClick="window.location.href = '${updateButton}'" />
+                        <input type="button" class="btn btn-danger" value="Delete" onClick="window.location.href = '${deleteButton}'" /></td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
-        <input type="button" value="Add" onclick="window.location.href = 'addNewEmployee' "/>
-
-
+        <input type="button" class="btn btn-primary" value="Add" onclick="window.location.href = 'addNewEmployee' "/>
     </div>
 
 
