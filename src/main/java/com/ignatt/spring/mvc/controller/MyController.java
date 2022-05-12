@@ -30,7 +30,6 @@ public class MyController {
     public String addNewEmployee(Model model) {
         Employee emmployee = new Employee();
         model.addAttribute("employee", emmployee);
-
         return "employee-info";
     }
     @RequestMapping("/saveEmployee")
@@ -48,7 +47,7 @@ public class MyController {
     }
 
     @RequestMapping("/deleteEmployee")
-    public String deleteEmployee(@RequestParam("empId") int id) {
+    public String deleteEmployee(@RequestParam("employeeId") int id) {
         employeeService.deleteEmployee(id);
         return "redirect:/";
     }
